@@ -6,23 +6,31 @@ def front(s,t):
     print('=-='*11)
     sleep(t)
     print(f'Step {s}:')
+    return None
+
+def screen(teste,passo):
+    driver.save_screenshot(f'{teste}_passo{passo}.png')
+    return None
 
 print('=-='*2,'Realizando teste002','=-='*2)
 
 while(True):
     
     t=0
+    teste = "teste002"
     options = webdriver.ChromeOptions()
     options.add_experimental_option('excludeSwitches', ['enable-logging'])
     driver = webdriver.Chrome(options=options)
 
     ##### Step 1 #####
-    front(1,t) 
+    passo = 1
+    front(passo,t) 
     print('''        Acessar a url: https://escritorioagil.netlify.app/
         ''')
     driver.get('https://escritorioagil.netlify.app/')
     print('Verificando acesso a url:')
-
+    screen(teste,passo)
+    screen(teste,passo)
     if driver.current_url == 'https://escritorioagil.netlify.app/':
         print("Acessou a url: https://escritorioagil.netlify.app/\n")
         sleep(t)
@@ -31,7 +39,8 @@ while(True):
         break
     
     ##### Step 2 #####
-    front(2,t)
+    passo = 2
+    front(passo,t) 
     print('''        Clicando em acessar conta''')
     driver.find_element(by=By.PARTIAL_LINK_TEXT, value='Log in').click()
     for i in range(1,4):
@@ -43,9 +52,10 @@ while(True):
     else:
         print(f'Não clicou!')
         break
-    
+    screen(teste,passo)
     ##### Step 3 #####
-    front(3,t)
+    passo = 3
+    front(passo,t) 
     print('''        Completando os campos: 
         Email e ''',end="")
     driver.find_element(by=By.XPATH, value='/html/body/div/div/form/div[2]/input').send_keys('teste@gmail.com')
