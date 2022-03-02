@@ -99,10 +99,7 @@ while(True):
     print('=-='*11)
     sleep(0.5)
     screen(teste,passo)
-    print('Teste finalizado sem nenhum erro!')
-    sleep(2)
-    
-        
-    #driver.close()
-    #driver.quit()    
+    print('Teste finalizado sem nenhum erro!')    
+    driver.close()
+    driver.quit()    
     break
