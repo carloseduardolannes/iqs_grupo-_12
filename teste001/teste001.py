@@ -81,6 +81,7 @@ while(True):
     passo = 4
     driver.find_element(by=By.XPATH, value='/html/body/div/div/div[2]/a[2]').click()
     passo = 3.1
+    sleep(0.5)
     screen(teste,passo)
     print('=-='*11)
     print('Teste finalizado sem nenhum erro!')
