@@ -94,12 +94,15 @@ while(True):
     print('''        Cadastrando um novo time''')
     driver.find_element(by=By.XPATH, value='/html/body/div/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/input').send_keys('Time dos Sonhos')
     sleep(t)
-    driver.find_element(by=By.XPATH, value='/html/body/div/div[2]/div[2]/div[1]/div[1]/div[2]/a').click()
+    #driver.find_element(by=By.XPATH, value='/html/body/div/div[2]/div[2]/div[1]/div[1]/div[2]/a').click()
+    driver.find_element_by_xpath("//div[@class='actions']/a").click()
+    
     print('=-='*11)
     sleep(0.5)
     screen(teste,passo)
     print('Teste finalizado sem nenhum erro!')    
-    driver.close()
-    driver.quit()   
+    
+    #driver.close()
+    #driver.quit()   
      
     break
