@@ -96,5 +96,6 @@ while(True):
     screen(teste,passo)
     print('Teste finalizado sem nenhum erro!')    
     driver.close()
-    driver.quit()    
+    driver.quit()   
+     
     break

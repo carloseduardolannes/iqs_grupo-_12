@@ -113,5 +113,6 @@ while(True):
     print('Teste finalizado sem nenhum erro!')
     
     driver.close()
-    driver.quit()    
+    driver.quit() 
+    
     break

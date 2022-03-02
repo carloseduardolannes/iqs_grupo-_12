@@ -86,5 +86,6 @@ while(True):
     sleep(t)
     
     driver.close()
-    driver.quit()    
+    driver.quit()   
+     
     break
