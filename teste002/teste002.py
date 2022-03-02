@@ -9,7 +9,7 @@ def front(s,t):
     return None
 
 def screen(teste,passo):
-    driver.save_screenshot(f'{teste}_passo{passo}.png')
+    driver.save_screenshot(f'teste002\{teste}_passo{passo}.png')
     return None
 
 print('=-='*2,'Realizando teste002','=-='*2)
