@@ -1,8 +1,3 @@
-from ast import get_source_segment
-from os import link
-from select import select
-import string
-from idna import valid_string_length
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from time import sleep
