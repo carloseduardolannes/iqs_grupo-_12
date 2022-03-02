@@ -9,15 +9,15 @@ def front(s,t):
     return None
 
 def screen(teste,passo):
-    driver.save_screenshot(f'teste002\{teste}_passo{passo}.png')
-    return None
+    driver.save_screenshot(f'teste002\{teste}_passo_{passo}.png')
+    return None        
 
 print('=-='*2,'Realizando teste002','=-='*2)
 
 while(True):
     
     t=0
-    teste = "teste002"
+    teste = "teste002_cria_novo_time_"
     options = webdriver.ChromeOptions()
     options.add_experimental_option('excludeSwitches', ['enable-logging'])
     driver = webdriver.Chrome(options=options)

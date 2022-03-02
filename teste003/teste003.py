@@ -9,15 +9,15 @@ def front(s,t):
     print(f'Step {s}:', end="")
     
 def screen(teste,passo):
-    driver.save_screenshot(f'teste003\{teste}_passo{passo}.png')
-    return None
+    driver.save_screenshot(f'teste003\{teste}_passo_{passo}.png')
+    return None        
 
 print('=-='*2,'Realizando teste003','=-='*2)
 
 while(True):
     
     t=0
-    teste = "teste003"
+    teste = "teste003_realizar_cadastro_e_login_"
     options = webdriver.ChromeOptions()
     options.add_experimental_option('excludeSwitches', ['enable-logging'])
     driver = webdriver.Chrome(options=options)
