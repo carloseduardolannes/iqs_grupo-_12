@@ -22,6 +22,7 @@ while(True):
     driver = webdriver.Chrome(options=options)
     
     ##### Step 1 #####
+    
     passo = 1.0
     front(passo,t)  
     print('''        Acessar a url: https://escritorioagil.netlify.app/
@@ -37,6 +38,7 @@ while(True):
         break
     
     ##### Step 2 #####
+    
     passo = 2.0
     front(passo,t) 
     print('''        Clicando em acessar conta''')
@@ -66,6 +68,7 @@ while(True):
     sleep(1)
     
     ##### Step 3 #####
+    
     passo = 3.0
     sleep(1)
     if driver.current_url == 'https://escritorioagil.netlify.app/teams':

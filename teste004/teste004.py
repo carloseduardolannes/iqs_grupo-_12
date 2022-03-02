@@ -75,6 +75,7 @@ while(True):
     sleep(1)
     passo = 2.1
     screen(teste,passo)
+    
     ##### Step 3 #####
     
     passo = 3.0

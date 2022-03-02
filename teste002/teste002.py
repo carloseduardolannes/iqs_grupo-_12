@@ -23,6 +23,7 @@ while(True):
     driver = webdriver.Chrome(options=options)
 
     ##### Step 1 #####
+    
     passo = 1.0
     front(passo,t) 
     print('''        Acessar a url: https://escritorioagil.netlify.app/
@@ -38,6 +39,7 @@ while(True):
         break
     
     ##### Step 2 #####
+    
     passo = 2.0
     front(passo,t) 
     print('''        Clicando em acessar conta''')
@@ -72,6 +74,7 @@ while(True):
         break
     
     ##### Step 3 #####
+    
     passo = 3.0
     front(passo,t)
     print('''        Clicando em Adicionar''')
@@ -84,8 +87,9 @@ while(True):
         print('Não entrou!')
         break
     
-    ##### Step 3 #####
-    passo = 3.0
+    ##### Step 4 #####
+    
+    passo = 4.0
     front(passo,t)
     print('''        Cadastrando um novo time''')
     driver.find_element(by=By.XPATH, value='/html/body/div/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/input').send_keys('Time dos Sonhos')

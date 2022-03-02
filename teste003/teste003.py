@@ -25,7 +25,8 @@ while(True):
     ##### Step 1 #####
     
     passo = 1.0
-    front(passo,t)  
+    front(passo,t)
+      
     print('''Acessar a url: https://escritorioagil.netlify.app/
         ''')
     driver.get('https://escritorioagil.netlify.app/')
@@ -40,6 +41,7 @@ while(True):
     screen(teste,passo)
     
     ##### Step 2 #####
+    
     passo = 2.0
     front(passo,t) 
     print('Clicando em Criar conta')
@@ -53,7 +55,9 @@ while(True):
         print(f'Não clicou!')
         break
     screen(teste,passo)
+    
     ##### Step 3 #####
+    
     passo = 3.0
     front(passo,t) 
     print('Completando os campos: Nome, ',end="")
@@ -122,6 +126,7 @@ while(True):
     print('Teste finalizado sem nenhum erro!')
     
     sleep(t*3)
+    
     driver.close()
     driver.quit()
     
