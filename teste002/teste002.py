@@ -22,16 +22,16 @@ while(True):
     driver.get('https://escritorioagil.netlify.app/')
     print('Verificando acesso a url:')
     screen(teste,passo)
-    sleep(t)
+
 
     ##### Step 2 #####
     passo = 2.0 
     #Clicando em acessar conta
     driver.find_element(by=By.PARTIAL_LINK_TEXT, value='Log in').click()
-    sleep(t)
+
     #Completando os campos: Email e Senha.
     driver.find_element(by=By.XPATH, value='/html/body/div/div/form/div[2]/input').send_keys('teste@gmail.com')
-    sleep(t)
+
     driver.find_element(by=By.XPATH, value='/html/body/div/div/form/div[3]/input').send_keys('1234567')
     screen(teste,passo)
     sleep(0.5)
