@@ -46,8 +46,8 @@ while(True):
     passo = 3.0
     #Clicando em Adicionar
     driver.find_element(by=By.XPATH, value='/html/body/div/div/div[4]/div[1]/button').click()
-    sleep(t)
-    
+    screen(teste,passo)
+    sleep(1)
     
     ##### Step 4 #####
     
@@ -55,9 +55,9 @@ while(True):
     #Cadastrando um novo time
     driver.find_element(by=By.XPATH, value='/html/body/div/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/input').send_keys('Time dos Sonhos')
     driver.find_element_by_xpath("//div[@class='actions']/a").click()
-    
-    sleep(0.5)
     screen(teste,passo)
+    sleep(0.5)
+    
     driver.close()
     driver.quit()
     break
