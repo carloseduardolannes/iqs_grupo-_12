@@ -7,7 +7,7 @@ def screen(teste,passo):
     return None
 
 t=0
-teste = "teste004_entrar_time"
+teste = "teste005_entrar_time"
 options = webdriver.ChromeOptions()
 options.add_experimental_option('excludeSwitches', ['enable-logging'])
 driver = webdriver.Chrome(options=options)
