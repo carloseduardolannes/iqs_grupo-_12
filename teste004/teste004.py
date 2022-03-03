@@ -2,6 +2,17 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from time import sleep
 
+###################################
+
+### ID: 7
+### Funcionalidade: Excluir
+#                   de um usuario
+### TEST CASE NAME: Entrar no sistema 
+#                   e excluir a conta 
+#                   de um usuário   
+
+###################################
+
 def screen(teste,passo):
     driver.save_screenshot(f'teste004\{teste}_passo_{passo}.png')
     return None        
@@ -23,7 +34,7 @@ screen(teste,passo)
 
 ##### Step 2 #####
 passo = 2.0
-#Clicando em acessar conta''')
+#Clicando em acessar conta
 driver.find_element(by=By.PARTIAL_LINK_TEXT, value='Log in').click()
 #Completando os campos: Email e Senha.
 driver.find_element(by=By.XPATH, value='/html/body/div/div/form/div[2]/input').send_keys('carlos@uff.br')

@@ -2,6 +2,15 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from time import sleep
 
+###################################
+
+### ID: 4
+### Funcionalidade: Cadastro e acesso
+#                   de um usuario
+### TEST CASE NAME: Criar cadastro  
+
+###################################
+
 def screen(teste,passo):
     driver.save_screenshot(f'teste003\{teste}_passo_{passo}.png')
     return None

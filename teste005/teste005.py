@@ -2,6 +2,16 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from time import sleep
 
+###################################
+
+### ID: 6
+### Funcionalidade: entrar em um time 
+#                   via código
+### TEST CASE NAME: Ingressar em um 
+#                   time pelo código  
+
+###################################
+
 def screen(teste,passo):
     driver.save_screenshot(f'teste005\{teste}_passo_{passo}.png')
     return None
