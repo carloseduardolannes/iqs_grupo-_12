@@ -28,10 +28,8 @@ while(True):
     passo = 2.0 
     #Clicando em acessar conta
     driver.find_element(by=By.PARTIAL_LINK_TEXT, value='Log in').click()
-
     #Completando os campos: Email e Senha.
     driver.find_element(by=By.XPATH, value='/html/body/div/div/form/div[2]/input').send_keys('teste@gmail.com')
-
     driver.find_element(by=By.XPATH, value='/html/body/div/div/form/div[3]/input').send_keys('1234567')
     screen(teste,passo)
     sleep(0.5)
