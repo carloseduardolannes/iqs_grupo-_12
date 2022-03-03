@@ -12,6 +12,8 @@ options.add_experimental_option('excludeSwitches', ['enable-logging'])
 driver = webdriver.Chrome(options=options)
 driver.maximize_window() 
 
+#Teste002 criando um novo time
+
 t=0
 teste = "teste002_cria_novo_time_"
 

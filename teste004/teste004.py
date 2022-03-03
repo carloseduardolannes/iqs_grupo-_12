@@ -6,11 +6,14 @@ def screen(teste,passo):
     driver.save_screenshot(f'teste004\{teste}_passo_{passo}.png')
     return None        
 
-t=0
-teste = "teste004_exclui_cadastro_"
 options = webdriver.ChromeOptions()
 options.add_experimental_option('excludeSwitches', ['enable-logging'])
 driver = webdriver.Chrome(options=options)
+
+#Teste004 Excluir uma conta
+
+t=0
+teste = "teste004_exclui_cadastro_"
 
 ##### Step 1 #####
 passo = 1.0 

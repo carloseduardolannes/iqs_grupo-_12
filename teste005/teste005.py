@@ -12,6 +12,8 @@ options = webdriver.ChromeOptions()
 options.add_experimental_option('excludeSwitches', ['enable-logging'])
 driver = webdriver.Chrome(options=options)
 
+#Teste005 entrar em um time existente
+
 ##### Step 1 #####
 passo = 1.0  
 #Acessar a url: https://escritorioagil.netlify.app/

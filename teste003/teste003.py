@@ -11,11 +11,12 @@ options.add_experimental_option('excludeSwitches', ['enable-logging'])
 driver = webdriver.Chrome(options=options)
 driver.maximize_window() 
 
+#teste003_Fazer um cadastro e logo após realizar um login
+
 t=0
 teste = "teste003_realizar_cadastro_e_login_"
 
 ##### Step 1 #####
-
 passo = 1.0
   
 #Acessando a url: https://escritorioagil.netlify.app/
