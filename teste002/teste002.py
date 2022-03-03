@@ -17,7 +17,6 @@ while(True):
     teste = "teste002_cria_novo_time_"
 
     ##### Step 1 #####
-    
     passo = 1.0 
     #Acessar a url: https://escritorioagil.netlify.app/
     driver.get('https://escritorioagil.netlify.app/')
@@ -25,9 +24,7 @@ while(True):
     screen(teste,passo)
     sleep(t)
 
-    
     ##### Step 2 #####
-    
     passo = 2.0 
     #Clicando em acessar conta
     driver.find_element(by=By.PARTIAL_LINK_TEXT, value='Log in').click()
@@ -50,7 +47,6 @@ while(True):
     sleep(1)
     
     ##### Step 4 #####
-    
     passo = 4.0
     #Cadastrando um novo time
     driver.find_element(by=By.XPATH, value='/html/body/div/div[2]/div[2]/div[1]/div[1]/div[1]/div[1]/input').send_keys('Time dos Sonhos')
