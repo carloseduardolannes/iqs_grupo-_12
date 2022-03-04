@@ -20,10 +20,9 @@ driver = webdriver.Chrome(options=options)
 driver.maximize_window() 
  
 t=0
-teste = "teste001_acesso_url_"   
+teste = "teste001_acesso_url"   
     
 ##### Step 1 #####
-
 passo = 1.0  
 #Usuário deve acessar a url: https://escritorioagil.netlify.app/
 driver.get('https://escritorioagil.netlify.app/')
@@ -34,7 +33,7 @@ passo = 2.0
 #Clicando em acessar conta
 driver.find_element(by=By.PARTIAL_LINK_TEXT, value='Log in').click()
 #Completando os campos: Email e senha.
-driver.find_element(by=By.XPATH, value='//*[@id="email"]').send_keys('teste@gmail.com')
+driver.find_element(by=By.XPATH, value='//*[@id="email"]').send_keys('time12@fest.com')
 driver.find_element(by=By.XPATH, value='//*[@id="password"]').send_keys('1234567')
 screen(teste,passo)
 #Clicando no Botão entrar    

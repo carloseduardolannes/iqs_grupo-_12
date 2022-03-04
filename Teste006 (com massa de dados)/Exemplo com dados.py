@@ -1,4 +1,4 @@
-from lib2to3.pgen2 import driver
+from turtle import clear
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
@@ -16,18 +16,15 @@ import time
 options = webdriver.ChromeOptions()
 options.add_experimental_option('excludeSwitches', ['enable-logging'])
 driver = webdriver.Chrome(options=options)
-#firefox = webdriver.Firefox()
-#firefox = webdriver.Chrome()
 
-arquivo_login = open("login.txt", "r")
-arquivo_senha = open("senha.txt", "r")
-arq = open("combinacao.txt","w")
+arquivo_login = open(".\Teste006 (com massa de dados)\login.txt", "r")
+arquivo_senha = open(".\Teste006 (com massa de dados)\senha.txt", "r")
 
 lista_login = arquivo_login.readlines()
 lista_senha = arquivo_senha.readlines()
 
-print(len(lista_login))
-print(len(lista_senha))
+print(f'Número de logins {len(lista_login)}')
+print(f'Número de senhas {len(lista_senha)}')
 
 cont = 0
 for i in range (0, len(lista_login)):
@@ -43,27 +40,36 @@ for i in range (0, len(lista_login)):
         submit = driver.find_element(by=By.XPATH, value='//*[@id="root"]/div/form/div[4]/button')
         submit.click()
         time.sleep(2)
+        #if  driver.current_url('https://escritorioagil.netlify.app/signin'):
+            #print('sim')
+            #submit = driver.find_element(by=By.XPATH, value='/html/body/div[2]/div/div[6]/button[1]')
+            #submit.click()    
 
         try:
             driver.find_element(by=By.XPATH, value='//*[@id="root"]/div/div[2]/a[2]')
             print("Login válido")
-            arq = open("combinacao.txt","w")
             combinacao = []
             combinacao.append("Login:")
             combinacao.append(lista_login[i])
+            time.sleep(0.5)
             combinacao.append(" Senha: ")
             combinacao.append(lista_senha[j])
+            arq = open("Teste006 (com massa de dados)\combinacao valida.txt","a")
+            arq.writelines('')
             arq.writelines(combinacao)
+            arq.close()
             driver.close()
             driver = webdriver.Chrome(options=options)
             driver.get('https://escritorioagil.netlify.app/')
            
         except: 
-            print("Login inválido")
+            print("Login inválido\n")
             time.sleep(2)
             driver.find_element(by=By.XPATH , value='/html/body/div[2]/div/div[6]/button[1]').click()
             
 driver.close()
+driver.quit()
 arq.close()
 arquivo_login.close()
 arquivo_senha.close()
+SystemExit
