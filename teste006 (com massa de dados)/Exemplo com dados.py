@@ -39,11 +39,7 @@ for i in range (0, len(lista_login)):
         password.send_keys(lista_senha[j])
         submit = driver.find_element(by=By.XPATH, value='//*[@id="root"]/div/form/div[4]/button')
         submit.click()
-        time.sleep(2)
-        #if  driver.current_url('https://escritorioagil.netlify.app/signin'):
-            #print('sim')
-            #submit = driver.find_element(by=By.XPATH, value='/html/body/div[2]/div/div[6]/button[1]')
-            #submit.click()    
+        time.sleep(2)  
 
         try:
             driver.find_element(by=By.XPATH, value='//*[@id="root"]/div/div[2]/a[2]')
